@@ -89,6 +89,8 @@ func RunService() {
 			log.Printf("【ServerStatus】 Service %s  status=%s \n", svcConfig.DisplayName, status)
 		case "v":
 			log.Printf("【ServerStatus】 Service %s  version=1.0 \n", svcConfig.DisplayName)
+		default:
+			maddycli.Run()
 		}
 	} else {
 		log.Printf("【ServerRun】 服务 %s 启动\n", svcConfig.DisplayName)
