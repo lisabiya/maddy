@@ -21,7 +21,7 @@ var (
 	// It should not be changed and is defined as a variable
 	// only for purposes of modification using -X linker flag.
 	//ConfigDirectory = "/etc/maddy"
-	ConfigDirectory = GetCurrentPath() + "/maddy"
+	ConfigDirectory = GetCurrentPath() + "/config"
 
 	// DefaultStateDirectory specifies platform-specific
 	// default for StateDirectory.
@@ -33,7 +33,7 @@ var (
 	// It should not be changed and is defined as a variable
 	// only for purposes of modification using -X linker flag.
 	//DefaultStateDirectory = "/var/lib/maddy"
-	DefaultStateDirectory = GetCurrentPath() + "/maddy/lib"
+	DefaultStateDirectory = GetCurrentPath() + "/config/lib"
 
 	// DefaultRuntimeDirectory specifies platform-specific
 	// default for RuntimeDirectory.
@@ -45,7 +45,7 @@ var (
 	// It should not be changed and is defined as a variable
 	// only for purposes of modification using -X linker flag.
 	//DefaultRuntimeDirectory = "/run/maddy"
-	DefaultRuntimeDirectory = GetCurrentPath() + "/maddy/run"
+	DefaultRuntimeDirectory = GetCurrentPath() + "/config/run"
 
 	// DefaultLibexecDirectory specifies platform-specific
 	// default for LibexecDirectory.
@@ -57,5 +57,5 @@ var (
 	// It should not be changed and is defined as a variable
 	// only for purposes of modification using -X linker flag.
 	//DefaultLibexecDirectory = "/usr/lib/maddy"
-	DefaultLibexecDirectory = GetCurrentPath() + "/maddy/usr"
+	DefaultLibexecDirectory = GetCurrentPath() + "/config/usr"
 )

@@ -90,7 +90,6 @@ func RunService() {
 		case "v":
 			log.Printf("【ServerStatus】 Service %s  version=1.0 \n", svcConfig.DisplayName)
 		}
-		return
 	} else {
 		log.Printf("【ServerRun】 服务 %s 启动\n", svcConfig.DisplayName)
 		var err = s.Run()
