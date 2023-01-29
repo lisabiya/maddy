@@ -22,6 +22,7 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
+	"os"
 	"path/filepath"
 	"sync"
 	"time"
@@ -70,8 +71,8 @@ func (f *FileLoader) Init(cfg *config.Map) error {
 		return errors.New("tls.loader.file: odd amount of arguments")
 	}
 	for i := 0; i < len(f.inlineArgs); i += 2 {
-		f.certPaths = append(f.certPaths, f.inlineArgs[i])
-		f.keyPaths = append(f.keyPaths, f.inlineArgs[i+1])
+		f.certPaths = append(f.certPaths, GetCurrentPath()+f.inlineArgs[i])
+		f.keyPaths = append(f.keyPaths, GetCurrentPath()+f.inlineArgs[i+1])
 	}
 
 	for _, certPath := range f.certPaths {
@@ -165,4 +166,10 @@ func (f *FileLoader) ConfigureTLS(c *tls.Config) error {
 func init() {
 	var _ module.TLSLoader = &FileLoader{}
 	module.Register("tls.loader.file", NewFileLoader)
+}
+
+func GetCurrentPath() string {
+	dir, _ := os.Executable()
+	exPath := filepath.Dir(dir)
+	return exPath
 }

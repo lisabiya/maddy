@@ -5,6 +5,7 @@ go 1.18
 require (
 	blitiri.com.ar/go/spf v1.5.1
 	github.com/GehirnInc/crypt v0.0.0-20200316065508-bb7000b8a962
+	github.com/astaxie/beego v1.12.3
 	github.com/caddyserver/certmagic v0.16.1
 	github.com/emersion/go-imap v1.2.2-0.20220928192137-6fac715be9cf
 	github.com/emersion/go-imap-compress v0.0.0-20201103190257-14809af1d1b9
@@ -26,6 +27,7 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/google/uuid v1.3.0
 	github.com/johannesboyne/gofakes3 v0.0.0-20210704111953-6a9f95c2941c
+	github.com/kardianos/service v1.2.2
 	github.com/lib/pq v1.10.6
 	github.com/libdns/alidns v1.0.3-0.20220501125541-4a895238a95d
 	github.com/libdns/cloudflare v0.1.1-0.20221006221909-9d3ab3c3cddd
@@ -103,6 +105,7 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/ryszard/goskiplist v0.0.0-20150312221310-2dfbae5fcf46 // indirect
 	github.com/shabbyrobe/gocovmerge v0.0.0-20180507124511-f6ea450bfb63 // indirect
+	github.com/shiena/ansicolor v0.0.0-20151119151921-a422bbe96644 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/vultr/govultr/v2 v2.17.2 // indirect
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
